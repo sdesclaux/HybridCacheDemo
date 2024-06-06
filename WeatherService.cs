@@ -63,7 +63,7 @@ namespace HybridCacheDemo
 
         private async Task<WeatherResponse?> GetWeatherAsync(string city)
         {
-            var url = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=d881505ac8fccf2b039eaca8ed72172f";
+            var url = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=";
             var httpClient = _httpClientFactory.CreateClient();
             var weatherResponse = await httpClient.GetAsync(url);
             if (weatherResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
